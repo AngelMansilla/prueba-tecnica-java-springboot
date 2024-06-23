@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories("com.mercadona.eanservice.repository")
+@EnableJpaRepositories(basePackages = "com.mercadona.eanservice.repository")
 @ComponentScan(basePackages = { "com.mercadona.eanservice.*" })
 @EntityScan("com.mercadona.eanservice.model")
 public class EanserviceApplication {

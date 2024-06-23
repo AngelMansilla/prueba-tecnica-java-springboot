@@ -1,11 +1,11 @@
 package com.mercadona.eanservice.service;
 
+import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.model.Provider;
 import com.mercadona.eanservice.model.Destination;
 import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.service.impl.ProductServiceImpl;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -58,10 +58,12 @@ public class ProductServiceTest {
     @Test
     public void whenFindById_thenProductIsFound() {
         when(productRepository.findById(product.getId())).thenReturn(Optional.of(product));
-        Optional<Product> foundProduct = productService.findById(product.getId());
+        Optional<ProductDTO> foundProduct = productService.findById(product.getId());
         verify(productRepository, times(1)).findById(product.getId());
         assertTrue(foundProduct.isPresent());
-        assertEquals(product, foundProduct.get());
+        assertEquals(product.getEan(), foundProduct.get().getEan());
+        assertEquals(provider.getName(), foundProduct.get().getProviderName());
+        assertEquals(destination.getName(), foundProduct.get().getDestinationName());
     }
 
     @Test

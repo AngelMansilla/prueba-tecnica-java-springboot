@@ -1,5 +1,6 @@
 package com.mercadona.eanservice.service.impl;
 
+import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.service.ProductService;
@@ -23,8 +24,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> findById(Long id) {
-        return productRepository.findById(id);
+    public Optional<ProductDTO> findById(Long id) {
+        return productRepository.findById(id).map(ProductDTO::fromProduct);
     }
 
     @Override

@@ -4,6 +4,8 @@ import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.service.EanService;
 import com.mercadona.eanservice.service.ProductService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +16,11 @@ import java.util.Optional;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    private final ProductService productService;
-    private final EanService eanService;
+    @Autowired
+    private ProductService productService;
 
-    public ProductController(ProductService productService, EanService eanService) {
-        this.productService = productService;
-        this.eanService = eanService;
-    }
+    @Autowired
+    private EanService eanService;
 
     @GetMapping
     public List<Product> getAllProducts() {
@@ -46,6 +46,22 @@ public class ProductController {
         return productService.save(product);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
+        Optional<Product> product = productService.findByIdRaw(id);
+        if (product.isPresent()) {
+            Product updatedProduct = product.get();
+            updatedProduct.setName(productDetails.getName());
+            updatedProduct.setProvider(productDetails.getProvider());
+            updatedProduct.setDestination(productDetails.getDestination());
+            updatedProduct.setEan(productDetails.getEan());
+            Product savedProduct = productService.save(updatedProduct);
+            return ResponseEntity.ok(ProductDTO.fromProduct(savedProduct));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteById(id);

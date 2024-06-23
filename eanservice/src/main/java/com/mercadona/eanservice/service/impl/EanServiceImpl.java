@@ -1,8 +1,8 @@
 package com.mercadona.eanservice.service.impl;
 
 import com.mercadona.eanservice.dto.ProductDTO;
-import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.model.Destination;
+import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.service.EanService;
 import org.springframework.stereotype.Service;
 

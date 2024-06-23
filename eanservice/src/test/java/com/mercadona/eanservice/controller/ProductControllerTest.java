@@ -4,12 +4,16 @@ import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.model.Provider;
 import com.mercadona.eanservice.model.Destination;
+import com.mercadona.eanservice.service.EanService;
 import com.mercadona.eanservice.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -22,12 +26,18 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@SpringBootTest
+@AutoConfigureMockMvc
 public class ProductControllerTest {
 
+    @Autowired
     private MockMvc mockMvc;
 
-    @Mock
+    @MockBean
     private ProductService productService;
+
+    @MockBean
+    private EanService eanService;
 
     @InjectMocks
     private ProductController productController;
@@ -39,7 +49,7 @@ public class ProductControllerTest {
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        this.mockMvc = MockMvcBuilders.standaloneSetup(productController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(productController).build();
 
         provider = new Provider();
         provider.setName("Proveedor Ejemplo");
@@ -92,9 +102,9 @@ public class ProductControllerTest {
         mockMvc.perform(get("/api/products")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(product.getId()))
-                .andExpect(jsonPath("$.ean").value(product.getEan()))
-                .andExpect(jsonPath("$.name").value(product.getName()));
+                .andExpect(jsonPath("$[0].id").value(product.getId()))
+                .andExpect(jsonPath("$[0].ean").value(product.getEan()))
+                .andExpect(jsonPath("$[0].name").value(product.getName()));
 
         verify(productService, times(1)).findAll();
     }
@@ -105,30 +115,37 @@ public class ProductControllerTest {
 
         mockMvc.perform(post("/api/products")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"ean\": \"1234567123451\", \"nombre\": \"Producto Ejemplo\"}"))
+                .content("{\"ean\": \"1234567123451\", \"name\": \"Producto Ejemplo\"}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.id").value(product.getId()))
                 .andExpect(jsonPath("$.ean").value("1234567123451"))
-                .andExpect(jsonPath("$.nombre").value("Producto Ejemplo"));
+                .andExpect(jsonPath("$.name").value("Producto Ejemplo"));
 
         verify(productService, times(1)).save(any(Product.class));
     }
 
     @Test
     public void whenUpdateProduct_thenReturnUpdatedProduct() throws Exception {
-        ProductDTO productDTO = ProductDTO.fromProduct(product);
-        when(productService.findById(1L)).thenReturn(Optional.of(productDTO));
-        when(productService.save(any(Product.class))).thenReturn(product);
+        Product updatedProduct = new Product();
+        updatedProduct.setId(product.getId());
+        updatedProduct.setEan(product.getEan());
+        updatedProduct.setName("Producto Actualizado");
+        updatedProduct.setProvider(product.getProvider());
+        updatedProduct.setDestination(product.getDestination());
 
-        mockMvc.perform(put("/api/products/1")
+        when(productService.findByIdRaw(product.getId())).thenReturn(Optional.of(product));
+        when(productService.save(any(Product.class))).thenReturn(updatedProduct);
+
+        mockMvc.perform(put("/api/products/{id}", product.getId())
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"ean\": \"1234567123451\", \"nombre\": \"Producto Actualizado\"}"))
+                .content(
+                        "{\"ean\": \"1234567123451\", \"name\": \"Producto Actualizado\", \"provider\": {\"providerCode\": \"1234567\", \"name\": \"Proveedor Ejemplo\"}, \"destination\": {\"code\": \"1\", \"name\": \"Destino Ejemplo\"}}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.id").value(product.getId()))
                 .andExpect(jsonPath("$.ean").value("1234567123451"))
-                .andExpect(jsonPath("$.nombre").value("Producto Actualizado"));
+                .andExpect(jsonPath("$.name").value("Producto Actualizado"));
 
-        verify(productService, times(1)).findById(1L);
+        verify(productService, times(1)).findByIdRaw(product.getId());
         verify(productService, times(1)).save(any(Product.class));
     }
 

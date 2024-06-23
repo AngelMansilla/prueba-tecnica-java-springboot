@@ -16,7 +16,11 @@ public class Product {
 
     @NotNull
     @Pattern(regexp = "\\d{13}", message = "EAN debe tener 13 dígitos")
+    @Column(unique = true)
     private String ean;
+
+    @NotNull
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "provider_id", nullable = false)
@@ -58,4 +62,14 @@ public class Product {
     public void setDestination(Destination destination) {
         this.destination = destination;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
 }

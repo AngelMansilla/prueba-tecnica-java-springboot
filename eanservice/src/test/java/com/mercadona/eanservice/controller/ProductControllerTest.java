@@ -50,6 +50,7 @@ public class ProductControllerTest {
         product = new Product();
         product.setId(1L);
         product.setEan("1234567123451");
+        product.setName("Producto Ejemplo");
         product.setProvider(provider);
         product.setDestination(destination);
     }
@@ -64,6 +65,7 @@ public class ProductControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(product.getId()))
                 .andExpect(jsonPath("$.ean").value(product.getEan()))
+                .andExpect(jsonPath("$.name").value(product.getName()))
                 .andExpect(jsonPath("$.providerName").value(provider.getName()))
                 .andExpect(jsonPath("$.destinationName").value(destination.getName()));
 

@@ -44,6 +44,7 @@ public class EanServiceTest {
         product = new Product();
         product.setId(1L); 
         product.setEan("1234567123451");
+        product.setName("Producto Ejemplo");
         product.setProvider(provider);
         product.setDestination(destination);
     }
@@ -55,6 +56,7 @@ public class EanServiceTest {
         verify(productRepository, times(1)).findByEan(product.getEan());
         assertTrue(foundProduct.isPresent());
         assertEquals(product.getEan(), foundProduct.get().getEan());
+        assertEquals(product.getName(), foundProduct.get().getName());
         assertEquals(provider.getName(), foundProduct.get().getProviderName());
         assertEquals(destination.getName(), foundProduct.get().getDestinationName());
     }

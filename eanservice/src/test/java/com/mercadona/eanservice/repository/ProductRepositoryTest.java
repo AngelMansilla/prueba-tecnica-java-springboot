@@ -37,6 +37,7 @@ public class ProductRepositoryTest {
 
         Product product = new Product();
         product.setEan("1234567123451");
+        product.setName("Producto Ejemplo");
         product.setProvider(provider);
         product.setDestination(destination);
         product = productRepository.save(product);  

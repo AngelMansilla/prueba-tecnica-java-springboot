@@ -26,6 +26,7 @@ public class ProductTest {
     public void whenProductIsValid_thenNoConstraintViolations() {
         Product product = new Product();
         product.setEan("1234567123451");
+        product.setName("Producto Ejemplo");
 
         Provider provider = new Provider();
         provider.setName("Proveedor Ejemplo");
@@ -44,7 +45,8 @@ public class ProductTest {
     @Test
     public void whenEanIsInvalid_thenOneConstraintViolation() {
         Product product = new Product();
-        product.setEan("1234512345671"); 
+        product.setEan("1234512345671");
+        product.setName("Producto Ejemplo"); 
 
         Provider provider = new Provider();
         provider.setName("Proveedor Ejemplo");
@@ -64,6 +66,7 @@ public class ProductTest {
     public void whenEanDoesNotMatchProviderAndDestination_thenOneConstraintViolation() {
         Product product = new Product();
         product.setEan("1111111111112");
+        product.setName("Producto Ejemplo");
         
         Provider provider = new Provider();
         provider.setName("Proveedor Ejemplo");

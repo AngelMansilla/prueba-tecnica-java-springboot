@@ -48,6 +48,7 @@ public class ProductControllerTest {
         destination.setCode("1");
 
         product = new Product();
+        product.setId(1L);  // Asegúrate de que el ID esté configurado
         product.setEan("1234567123451");
         product.setProvider(provider);
         product.setDestination(destination);

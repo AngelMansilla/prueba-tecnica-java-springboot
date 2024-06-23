@@ -4,6 +4,8 @@ import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.service.ProductService;
+
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +31,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Cacheable("products")
     public Optional<Product> findByIdRaw(Long id) {
         return productRepository.findById(id);
     }

@@ -1,0 +1,727 @@
+2024-06-23T22:16:23.555+02:00  INFO 25344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 25344 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:16:23.557+02:00 DEBUG 25344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:16:23.558+02:00  INFO 25344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:16:24.134+02:00  INFO 25344 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:16:24.179+02:00  INFO 25344 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:16:24.953+02:00  INFO 25344 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:16:24.967+02:00  INFO 25344 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:16:24.968+02:00  INFO 25344 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:16:25.100+02:00  INFO 25344 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:16:25.100+02:00  INFO 25344 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1486 ms
+2024-06-23T22:16:25.128+02:00  INFO 25344 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:16:25.319+02:00  INFO 25344 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:16:25.321+02:00  INFO 25344 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:16:25.331+02:00  INFO 25344 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:16:25.386+02:00 DEBUG 25344 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:16:25.544+02:00  INFO 25344 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:16:25.544+02:00  INFO 25344 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:16:25.572+02:00  INFO 25344 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:16:25.591+02:00  INFO 25344 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:16:25.592+02:00  INFO 25344 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T22:16:25.593+02:00  WARN 25344 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:16:25.598+02:00  INFO 25344 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:16:25.629+02:00  INFO 25344 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:16:25.633+02:00  INFO 25344 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:16:25.701+02:00  INFO 25344 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:16:25.763+02:00  INFO 25344 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:16:26.075+02:00  INFO 25344 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:16:26.276+02:00  WARN 25344 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:16:27.145+02:00  INFO 25344 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:16:27.186+02:00  INFO 25344 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:16:27.218+02:00  WARN 25344 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:16:27.218+02:00 DEBUG 25344 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:16:27.648+02:00  WARN 25344 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:16:27.884+02:00 DEBUG 25344 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:16:28.161+02:00  INFO 25344 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:16:28.168+02:00  INFO 25344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 5.07 seconds (process running for 5.432)
+2024-06-23T22:17:29.435+02:00  INFO 25344 --- [eanservice] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:17:29.435+02:00  INFO 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:17:29.438+02:00  INFO 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-23T22:17:29.453+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-06-23T22:17:29.460+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:17:29.463+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T22:17:29.471+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-23T22:17:29.471+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:17:29.472+02:00 DEBUG 25344 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T22:18:25.512+02:00  INFO 25344 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:18:25.517+02:00  INFO 25344 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:18:25.520+02:00  INFO 25344 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:18:45.693+02:00  INFO 11988 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 11988 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:18:45.695+02:00 DEBUG 11988 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:18:45.695+02:00  INFO 11988 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:18:46.233+02:00  INFO 11988 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:18:46.274+02:00  INFO 11988 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:18:47.031+02:00  INFO 11988 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:18:47.048+02:00  INFO 11988 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:18:47.049+02:00  INFO 11988 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:18:47.118+02:00  INFO 11988 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:18:47.119+02:00  INFO 11988 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1374 ms
+2024-06-23T22:18:47.152+02:00  INFO 11988 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:18:47.349+02:00  INFO 11988 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:18:47.351+02:00  INFO 11988 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:18:47.364+02:00  INFO 11988 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:18:47.426+02:00 DEBUG 11988 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:18:47.625+02:00  INFO 11988 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:18:47.625+02:00  INFO 11988 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:18:47.662+02:00  INFO 11988 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:18:47.681+02:00  INFO 11988 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:18:47.683+02:00  INFO 11988 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T22:18:47.683+02:00  WARN 11988 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:18:47.690+02:00  INFO 11988 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:18:47.722+02:00  INFO 11988 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:18:47.727+02:00  INFO 11988 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:18:47.794+02:00  INFO 11988 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:18:47.857+02:00  INFO 11988 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:18:48.163+02:00  INFO 11988 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:18:48.374+02:00  WARN 11988 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:18:49.244+02:00  INFO 11988 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:18:49.285+02:00  INFO 11988 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:18:49.316+02:00  WARN 11988 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:18:49.317+02:00 DEBUG 11988 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:18:49.710+02:00  WARN 11988 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:18:49.929+02:00 DEBUG 11988 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:18:50.222+02:00  INFO 11988 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:18:50.230+02:00  INFO 11988 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.954 seconds (process running for 5.253)
+2024-06-23T22:18:56.229+02:00  INFO 11988 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:18:56.230+02:00  INFO 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:18:56.231+02:00  INFO 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T22:18:56.244+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-06-23T22:18:56.252+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:18:56.255+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T22:18:56.266+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-23T22:18:56.267+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:18:56.267+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T22:19:22.238+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:19:22.239+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:19:22.239+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:19:25.449+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:19:25.449+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:19:25.450+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:19:35.276+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:19:35.277+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:19:35.277+02:00 DEBUG 11988 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:21:51.424+02:00  INFO 11988 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:21:51.426+02:00  INFO 11988 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:21:51.428+02:00  INFO 11988 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:22:01.763+02:00  INFO 13676 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 13676 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:22:01.764+02:00 DEBUG 13676 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:22:01.765+02:00  INFO 13676 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:22:02.274+02:00  INFO 13676 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:22:02.313+02:00  INFO 13676 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:22:03.085+02:00  INFO 13676 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:22:03.104+02:00  INFO 13676 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:22:03.104+02:00  INFO 13676 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:22:03.181+02:00  INFO 13676 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:22:03.181+02:00  INFO 13676 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1369 ms
+2024-06-23T22:22:03.214+02:00  INFO 13676 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:22:03.486+02:00  INFO 13676 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:22:03.488+02:00  INFO 13676 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:22:03.501+02:00  INFO 13676 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:22:03.578+02:00 DEBUG 13676 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:22:03.758+02:00  INFO 13676 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:22:03.759+02:00  INFO 13676 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:22:03.787+02:00  INFO 13676 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:22:03.805+02:00  INFO 13676 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:22:03.807+02:00  INFO 13676 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T22:22:03.807+02:00  WARN 13676 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:22:03.814+02:00  INFO 13676 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:22:03.848+02:00  INFO 13676 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:22:03.852+02:00  INFO 13676 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:22:03.920+02:00  INFO 13676 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:22:03.983+02:00  INFO 13676 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:22:04.311+02:00  INFO 13676 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:22:04.514+02:00  WARN 13676 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:22:05.407+02:00  INFO 13676 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:22:05.445+02:00  INFO 13676 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:22:05.475+02:00  WARN 13676 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:22:05.475+02:00 DEBUG 13676 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:22:05.918+02:00  WARN 13676 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:22:06.172+02:00 DEBUG 13676 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:22:06.470+02:00  INFO 13676 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:22:06.479+02:00  INFO 13676 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 5.105 seconds (process running for 5.394)
+2024-06-23T22:22:08.628+02:00  INFO 13676 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:22:08.629+02:00  INFO 13676 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:22:08.630+02:00  INFO 13676 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T22:22:08.643+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:22:08.649+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:22:08.650+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:24:27.516+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:24:27.519+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:24:27.520+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:27:30.482+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:27:30.483+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:27:30.487+02:00 DEBUG 13676 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:27:57.940+02:00  INFO 13676 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:27:57.954+02:00  INFO 13676 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:27:57.966+02:00  INFO 13676 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:28:06.007+02:00  INFO 29344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 29344 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:28:06.009+02:00 DEBUG 29344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:28:06.010+02:00  INFO 29344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:28:06.640+02:00  INFO 29344 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:28:06.704+02:00  INFO 29344 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:28:07.519+02:00  INFO 29344 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:28:07.534+02:00  INFO 29344 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:28:07.534+02:00  INFO 29344 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:28:07.606+02:00  INFO 29344 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:28:07.606+02:00  INFO 29344 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1537 ms
+2024-06-23T22:28:07.634+02:00  INFO 29344 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:28:07.833+02:00  INFO 29344 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:28:07.835+02:00  INFO 29344 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:28:07.844+02:00  INFO 29344 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:28:07.906+02:00 DEBUG 29344 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:28:08.079+02:00  INFO 29344 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:28:08.080+02:00  INFO 29344 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:28:08.113+02:00  INFO 29344 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:28:08.132+02:00  INFO 29344 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:28:08.133+02:00  INFO 29344 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2024-06-23T22:28:08.134+02:00  WARN 29344 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:28:08.141+02:00  INFO 29344 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:28:08.176+02:00  INFO 29344 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:28:08.181+02:00  INFO 29344 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:28:08.261+02:00  INFO 29344 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:28:08.330+02:00  INFO 29344 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:28:08.674+02:00  INFO 29344 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:28:08.938+02:00  WARN 29344 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:28:09.884+02:00  INFO 29344 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:28:09.925+02:00  INFO 29344 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:28:09.956+02:00  WARN 29344 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:28:09.956+02:00 DEBUG 29344 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:28:10.428+02:00  WARN 29344 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:28:10.708+02:00 DEBUG 29344 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:28:11.062+02:00  INFO 29344 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:28:11.071+02:00  INFO 29344 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 5.527 seconds (process running for 5.861)
+2024-06-23T22:28:35.695+02:00  INFO 29344 --- [eanservice] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:28:35.696+02:00  INFO 29344 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:28:35.698+02:00  INFO 29344 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T22:28:35.713+02:00 DEBUG 29344 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:28:35.721+02:00 DEBUG 29344 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:28:35.724+02:00 DEBUG 29344 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:29:46.819+02:00  INFO 29344 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:29:46.821+02:00  INFO 29344 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:29:46.823+02:00  INFO 29344 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:32:03.112+02:00  INFO 10620 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Starting AuthControllerTest using Java 17.0.11 with PID 10620 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:32:03.113+02:00 DEBUG 10620 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:32:03.114+02:00  INFO 10620 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:32:03.962+02:00  INFO 10620 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:32:04.013+02:00  INFO 10620 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:32:06.020+02:00  INFO 10620 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:32:06.237+02:00  INFO 10620 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:32:06.239+02:00  INFO 10620 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:32:06.261+02:00  INFO 10620 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:32:06.261+02:00  INFO 10620 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:32:06.297+02:00  INFO 10620 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:32:06.320+02:00  INFO 10620 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:32:06.322+02:00  INFO 10620 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.007s)
+2024-06-23T22:32:06.323+02:00  WARN 10620 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:32:06.330+02:00  INFO 10620 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:32:06.374+02:00  INFO 10620 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:32:06.379+02:00  INFO 10620 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:32:06.480+02:00  INFO 10620 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:32:06.561+02:00  INFO 10620 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:32:06.753+02:00  INFO 10620 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:32:07.033+02:00  WARN 10620 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:32:07.999+02:00  INFO 10620 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:32:08.043+02:00  INFO 10620 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:32:08.584+02:00  WARN 10620 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:32:08.603+02:00  WARN 10620 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:32:08.603+02:00 DEBUG 10620 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:32:08.912+02:00 DEBUG 10620 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:32:09.281+02:00  INFO 10620 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:32:09.338+02:00 DEBUG 10620 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:32:09.339+02:00  INFO 10620 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-23T22:32:09.339+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T22:32:09.340+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-23T22:32:09.375+02:00  INFO 10620 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Started AuthControllerTest in 6.585 seconds (process running for 7.787)
+2024-06-23T22:32:09.440+02:00  INFO 10620 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-23T22:32:09.440+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T22:32:09.440+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-23T22:32:09.550+02:00  INFO 10620 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-23T22:32:09.550+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T22:32:09.550+02:00  INFO 10620 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-23T22:32:09.568+02:00  INFO 10620 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:32:09.570+02:00  INFO 10620 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:32:09.572+02:00  INFO 10620 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:32:23.838+02:00  INFO 20268 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 20268 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:32:23.839+02:00 DEBUG 20268 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:32:23.840+02:00  INFO 20268 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:32:24.329+02:00  INFO 20268 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:32:24.368+02:00  INFO 20268 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:32:25.049+02:00  INFO 20268 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:32:25.060+02:00  INFO 20268 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:32:25.061+02:00  INFO 20268 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:32:25.124+02:00  INFO 20268 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:32:25.126+02:00  INFO 20268 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1238 ms
+2024-06-23T22:32:25.155+02:00  INFO 20268 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:32:25.339+02:00  INFO 20268 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:32:25.341+02:00  INFO 20268 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:32:25.352+02:00  INFO 20268 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:32:25.407+02:00 DEBUG 20268 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:32:25.548+02:00  INFO 20268 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:32:25.548+02:00  INFO 20268 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:32:25.580+02:00  INFO 20268 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:32:25.596+02:00  INFO 20268 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:32:25.598+02:00  INFO 20268 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T22:32:25.599+02:00  WARN 20268 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:32:25.604+02:00  INFO 20268 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:32:25.639+02:00  INFO 20268 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:32:25.643+02:00  INFO 20268 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:32:25.704+02:00  INFO 20268 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:32:25.749+02:00  INFO 20268 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:32:26.008+02:00  INFO 20268 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:32:26.190+02:00  WARN 20268 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:32:26.964+02:00  INFO 20268 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:32:27.001+02:00  INFO 20268 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:32:27.032+02:00  WARN 20268 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:32:27.032+02:00 DEBUG 20268 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:32:27.404+02:00  WARN 20268 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:32:27.610+02:00 DEBUG 20268 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:32:27.867+02:00  INFO 20268 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:32:27.875+02:00  INFO 20268 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.432 seconds (process running for 4.762)
+2024-06-23T22:32:39.522+02:00  INFO 20268 --- [eanservice] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:32:39.522+02:00  INFO 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:32:39.523+02:00  INFO 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-06-23T22:32:39.536+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:32:39.542+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:32:39.545+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:33:06.314+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:33:06.314+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:06.314+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:33:27.825+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2024-06-23T22:33:27.825+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.826+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2024-06-23T22:33:27.877+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2024-06-23T22:33:27.877+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.878+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2024-06-23T22:33:27.882+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2024-06-23T22:33:27.883+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.883+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2024-06-23T22:33:27.884+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.885+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:27.886+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2024-06-23T22:33:27.886+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2024-06-23T22:33:28.242+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:28.243+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.243+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:28.704+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2024-06-23T22:33:28.704+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.705+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2024-06-23T22:33:28.753+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2024-06-23T22:33:28.754+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.754+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2024-06-23T22:33:28.756+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2024-06-23T22:33:28.756+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2024-06-23T22:33:28.757+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2024-06-23T22:33:28.760+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.757+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2024-06-23T22:33:28.760+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.761+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.761+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2024-06-23T22:33:28.761+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.762+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2024-06-23T22:33:28.762+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2024-06-23T22:33:28.762+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2024-06-23T22:33:28.864+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:28.864+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.865+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:28.973+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api-docs/swagger-config
+2024-06-23T22:33:28.973+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.975+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api-docs/swagger-config
+2024-06-23T22:33:28.981+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:28.982+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:28.982+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:29.015+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api-docs
+2024-06-23T22:33:29.016+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:29.016+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api-docs
+2024-06-23T22:33:29.031+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:29.032+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:33:29.032+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2024-06-23T22:33:29.308+02:00  WARN 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1671] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["401"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2024-06-23T22:33:29.443+02:00  INFO 20268 --- [eanservice] [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 419 ms
+2024-06-23T22:35:49.206+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:35:49.206+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:35:49.207+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:35:52.755+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:35:52.756+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:35:52.756+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:45:31.350+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /auth/login
+2024-06-23T22:45:31.351+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:45:31.351+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:45:31.353+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /auth/login
+2024-06-23T22:45:42.380+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /auth/login
+2024-06-23T22:45:42.380+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:45:42.380+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:45:42.381+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /auth/login
+2024-06-23T22:46:38.522+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:46:38.523+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:46:38.523+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:46:38.523+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:46:44.526+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:46:44.526+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:46:44.526+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:46:44.527+02:00 DEBUG 20268 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:46:55.864+02:00  INFO 20268 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:46:55.867+02:00  INFO 20268 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:46:55.871+02:00  INFO 20268 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:47:15.081+02:00  INFO 19824 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 19824 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:47:15.083+02:00 DEBUG 19824 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:47:15.084+02:00  INFO 19824 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:47:15.607+02:00  INFO 19824 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:47:15.644+02:00  INFO 19824 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:47:16.317+02:00  INFO 19824 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:47:16.331+02:00  INFO 19824 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:47:16.332+02:00  INFO 19824 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:47:16.397+02:00  INFO 19824 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:47:16.398+02:00  INFO 19824 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1263 ms
+2024-06-23T22:47:16.424+02:00  INFO 19824 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:47:16.602+02:00  INFO 19824 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:47:16.604+02:00  INFO 19824 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:47:16.613+02:00  INFO 19824 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:47:16.667+02:00 DEBUG 19824 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:47:16.813+02:00  INFO 19824 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:47:16.813+02:00  INFO 19824 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:47:16.842+02:00  INFO 19824 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:47:16.860+02:00  INFO 19824 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:47:16.861+02:00  INFO 19824 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T22:47:16.862+02:00  WARN 19824 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:47:16.868+02:00  INFO 19824 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:47:16.899+02:00  INFO 19824 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:47:16.903+02:00  INFO 19824 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:47:16.969+02:00  INFO 19824 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:47:17.034+02:00  INFO 19824 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:47:17.397+02:00  INFO 19824 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:47:17.600+02:00  WARN 19824 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:47:18.494+02:00  INFO 19824 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:47:18.537+02:00  INFO 19824 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:47:18.570+02:00  WARN 19824 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:47:18.571+02:00 DEBUG 19824 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:47:18.959+02:00  WARN 19824 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:47:19.177+02:00 DEBUG 19824 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:47:19.451+02:00  INFO 19824 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:47:19.459+02:00  INFO 19824 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.797 seconds (process running for 5.099)
+2024-06-23T22:47:27.469+02:00  INFO 19824 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:47:27.469+02:00  INFO 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:47:27.470+02:00  INFO 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T22:47:27.483+02:00 DEBUG 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:47:27.489+02:00 DEBUG 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:47:27.489+02:00 DEBUG 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:47:27.491+02:00 DEBUG 19824 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:53:42.189+02:00  INFO 19824 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:53:42.191+02:00  INFO 19824 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T22:53:42.192+02:00  INFO 19824 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T22:55:35.118+02:00  INFO 30644 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 30644 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T22:55:35.121+02:00 DEBUG 30644 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T22:55:35.122+02:00  INFO 30644 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T22:55:35.647+02:00  INFO 30644 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T22:55:35.694+02:00  INFO 30644 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2024-06-23T22:55:36.358+02:00  INFO 30644 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T22:55:36.370+02:00  INFO 30644 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T22:55:36.371+02:00  INFO 30644 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T22:55:36.467+02:00  INFO 30644 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T22:55:36.468+02:00  INFO 30644 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1299 ms
+2024-06-23T22:55:36.519+02:00  INFO 30644 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T22:55:36.727+02:00  INFO 30644 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T22:55:36.729+02:00  INFO 30644 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T22:55:36.738+02:00  INFO 30644 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T22:55:36.788+02:00 DEBUG 30644 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T22:55:36.937+02:00  INFO 30644 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T22:55:36.938+02:00  INFO 30644 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T22:55:36.969+02:00  INFO 30644 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T22:55:36.989+02:00  INFO 30644 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T22:55:36.991+02:00  INFO 30644 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2024-06-23T22:55:36.991+02:00  WARN 30644 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T22:55:36.998+02:00  INFO 30644 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T22:55:37.030+02:00  INFO 30644 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T22:55:37.033+02:00  INFO 30644 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T22:55:37.093+02:00  INFO 30644 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T22:55:37.141+02:00  INFO 30644 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T22:55:37.402+02:00  INFO 30644 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T22:55:37.601+02:00  WARN 30644 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T22:55:38.400+02:00  INFO 30644 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T22:55:38.436+02:00  INFO 30644 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T22:55:38.464+02:00  WARN 30644 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T22:55:38.465+02:00 DEBUG 30644 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T22:55:38.842+02:00  WARN 30644 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T22:55:39.051+02:00 DEBUG 30644 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T22:55:39.302+02:00  INFO 30644 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T22:55:39.310+02:00  INFO 30644 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.633 seconds (process running for 4.936)
+2024-06-23T22:56:07.791+02:00  INFO 30644 --- [eanservice] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T22:56:07.792+02:00  INFO 30644 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T22:56:07.793+02:00  INFO 30644 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T22:56:07.805+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:56:07.811+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:56:07.813+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:56:10.220+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:56:10.220+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:56:10.220+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:56:10.914+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:56:10.915+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:56:10.915+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:56:16.225+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:56:16.226+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:56:16.226+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T22:56:16.226+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T22:56:29.156+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T22:56:29.157+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T22:56:29.157+02:00 DEBUG 30644 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:09.352+02:00  INFO 30644 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:01:09.354+02:00  INFO 30644 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T23:01:09.356+02:00  INFO 30644 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T23:01:17.546+02:00  INFO 13236 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 13236 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T23:01:17.548+02:00 DEBUG 13236 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T23:01:17.548+02:00  INFO 13236 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T23:01:18.031+02:00  INFO 13236 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T23:01:18.071+02:00  INFO 13236 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2024-06-23T23:01:18.716+02:00  INFO 13236 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T23:01:18.728+02:00  INFO 13236 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T23:01:18.728+02:00  INFO 13236 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T23:01:18.794+02:00  INFO 13236 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T23:01:18.795+02:00  INFO 13236 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2024-06-23T23:01:18.820+02:00  INFO 13236 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T23:01:19.014+02:00  INFO 13236 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T23:01:19.016+02:00  INFO 13236 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T23:01:19.025+02:00  INFO 13236 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T23:01:19.079+02:00 DEBUG 13236 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T23:01:19.221+02:00  INFO 13236 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T23:01:19.221+02:00  INFO 13236 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T23:01:19.249+02:00  INFO 13236 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T23:01:19.265+02:00  INFO 13236 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T23:01:19.267+02:00  INFO 13236 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T23:01:19.267+02:00  WARN 13236 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T23:01:19.273+02:00  INFO 13236 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T23:01:19.303+02:00  INFO 13236 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T23:01:19.306+02:00  INFO 13236 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T23:01:19.368+02:00  INFO 13236 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T23:01:19.430+02:00  INFO 13236 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T23:01:19.719+02:00  INFO 13236 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T23:01:19.910+02:00  WARN 13236 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T23:01:20.738+02:00  INFO 13236 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T23:01:20.776+02:00  INFO 13236 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:01:20.806+02:00  WARN 13236 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T23:01:20.806+02:00 DEBUG 13236 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T23:01:21.183+02:00  WARN 13236 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T23:01:21.403+02:00 DEBUG 13236 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T23:01:21.658+02:00  INFO 13236 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T23:01:21.664+02:00  INFO 13236 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.504 seconds (process running for 4.797)
+2024-06-23T23:01:28.693+02:00  INFO 13236 --- [eanservice] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T23:01:28.694+02:00  INFO 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T23:01:28.695+02:00  INFO 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T23:01:28.707+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:28.713+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:28.716+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:33.260+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:33.261+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:33.261+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:33.261+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:34.409+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:34.409+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:34.410+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:34.410+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:35.729+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:35.730+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:35.730+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:35.730+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:36.185+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:36.185+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:36.186+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:36.186+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:36.367+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:36.367+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:36.368+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:36.368+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:01:38.236+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:01:38.237+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:01:38.237+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:01:38.237+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:03:09.553+02:00  INFO 31984 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Starting AuthControllerTest using Java 17.0.11 with PID 31984 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T23:03:09.554+02:00 DEBUG 31984 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T23:03:09.554+02:00  INFO 31984 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T23:03:10.410+02:00  INFO 31984 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T23:03:10.457+02:00  INFO 31984 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2024-06-23T23:03:12.597+02:00  INFO 31984 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T23:03:12.792+02:00  INFO 31984 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T23:03:12.798+02:00  INFO 31984 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T23:03:12.819+02:00  INFO 31984 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T23:03:12.820+02:00  INFO 31984 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T23:03:12.861+02:00  INFO 31984 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T23:03:12.886+02:00  INFO 31984 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T23:03:12.888+02:00  INFO 31984 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.008s)
+2024-06-23T23:03:12.888+02:00  WARN 31984 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T23:03:12.899+02:00  INFO 31984 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T23:03:12.949+02:00  INFO 31984 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T23:03:12.954+02:00  INFO 31984 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T23:03:13.051+02:00  INFO 31984 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T23:03:13.128+02:00  INFO 31984 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T23:03:13.327+02:00  INFO 31984 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T23:03:13.627+02:00  WARN 31984 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T23:03:14.572+02:00  INFO 31984 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T23:03:14.612+02:00  INFO 31984 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:03:15.196+02:00  WARN 31984 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T23:03:15.216+02:00  WARN 31984 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T23:03:15.216+02:00 DEBUG 31984 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T23:03:15.544+02:00 DEBUG 31984 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T23:03:15.956+02:00  INFO 31984 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T23:03:16.024+02:00 DEBUG 31984 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T23:03:16.026+02:00  INFO 31984 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-23T23:03:16.026+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T23:03:16.027+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-23T23:03:16.077+02:00  INFO 31984 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Started AuthControllerTest in 6.837 seconds (process running for 8.225)
+2024-06-23T23:03:16.232+02:00  INFO 31984 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-23T23:03:16.233+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T23:03:16.233+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-23T23:03:16.399+02:00  INFO 31984 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-23T23:03:16.400+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-23T23:03:16.400+02:00  INFO 31984 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-23T23:03:16.420+02:00  INFO 31984 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:03:16.422+02:00  INFO 31984 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T23:03:16.425+02:00  INFO 31984 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T23:03:32.070+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:03:32.070+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:03:32.070+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:03:32.071+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:03:32.912+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:03:32.913+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:03:32.913+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:03:32.913+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:03:34.061+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:03:34.061+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:03:34.062+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:03:34.062+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:03:34.423+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:03:34.424+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:03:34.424+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:03:34.424+02:00 DEBUG 13236 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:03:37.496+02:00  INFO 13236 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:03:37.497+02:00  INFO 13236 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T23:03:37.499+02:00  INFO 13236 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T23:03:46.852+02:00  INFO 16864 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 16864 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T23:03:46.853+02:00 DEBUG 16864 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T23:03:46.854+02:00  INFO 16864 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T23:03:47.341+02:00  INFO 16864 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T23:03:47.378+02:00  INFO 16864 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2024-06-23T23:03:48.041+02:00  INFO 16864 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T23:03:48.053+02:00  INFO 16864 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T23:03:48.053+02:00  INFO 16864 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T23:03:48.112+02:00  INFO 16864 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T23:03:48.114+02:00  INFO 16864 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1210 ms
+2024-06-23T23:03:48.142+02:00  INFO 16864 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T23:03:48.309+02:00  INFO 16864 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T23:03:48.311+02:00  INFO 16864 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T23:03:48.320+02:00  INFO 16864 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T23:03:48.369+02:00 DEBUG 16864 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T23:03:48.514+02:00  INFO 16864 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T23:03:48.515+02:00  INFO 16864 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T23:03:48.542+02:00  INFO 16864 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T23:03:48.560+02:00  INFO 16864 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T23:03:48.562+02:00  INFO 16864 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2024-06-23T23:03:48.563+02:00  WARN 16864 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T23:03:48.570+02:00  INFO 16864 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T23:03:48.603+02:00  INFO 16864 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T23:03:48.605+02:00  INFO 16864 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T23:03:48.663+02:00  INFO 16864 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T23:03:48.712+02:00  INFO 16864 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T23:03:48.972+02:00  INFO 16864 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T23:03:49.161+02:00  WARN 16864 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T23:03:50.009+02:00  INFO 16864 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T23:03:50.048+02:00  INFO 16864 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:03:50.076+02:00  WARN 16864 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T23:03:50.077+02:00 DEBUG 16864 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T23:03:50.475+02:00  WARN 16864 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T23:03:50.692+02:00 DEBUG 16864 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T23:03:50.966+02:00  INFO 16864 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T23:03:50.973+02:00  INFO 16864 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.51 seconds (process running for 4.804)
+2024-06-23T23:04:13.445+02:00  INFO 16864 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T23:04:13.445+02:00  INFO 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T23:04:13.447+02:00  INFO 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T23:04:13.463+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:04:13.471+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:04:13.472+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:04:13.473+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2024-06-23T23:04:53.130+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /auth/login
+2024-06-23T23:04:53.131+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:04:53.131+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /auth/login
+2024-06-23T23:04:53.213+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-23T23:04:53.213+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:04:53.214+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:04:53.219+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-23T23:04:53.220+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:04:53.220+02:00 DEBUG 16864 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:07:22.583+02:00  INFO 16864 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:07:22.584+02:00  INFO 16864 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T23:07:22.587+02:00  INFO 16864 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T23:08:19.758+02:00  INFO 22184 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 22184 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-23T23:08:19.760+02:00 DEBUG 22184 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-23T23:08:19.761+02:00  INFO 22184 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T23:08:20.276+02:00  INFO 22184 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T23:08:20.314+02:00  INFO 22184 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2024-06-23T23:08:20.981+02:00  INFO 22184 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T23:08:20.993+02:00  INFO 22184 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T23:08:20.994+02:00  INFO 22184 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-23T23:08:21.058+02:00  INFO 22184 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-23T23:08:21.059+02:00  INFO 22184 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2024-06-23T23:08:21.087+02:00  INFO 22184 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T23:08:21.272+02:00  INFO 22184 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-23T23:08:21.275+02:00  INFO 22184 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T23:08:21.283+02:00  INFO 22184 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-23T23:08:21.335+02:00 DEBUG 22184 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-23T23:08:21.484+02:00  INFO 22184 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-23T23:08:21.484+02:00  INFO 22184 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-23T23:08:21.516+02:00  INFO 22184 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-23T23:08:21.533+02:00  INFO 22184 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-23T23:08:21.535+02:00  INFO 22184 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-23T23:08:21.535+02:00  WARN 22184 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-23T23:08:21.541+02:00  INFO 22184 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-23T23:08:21.571+02:00  INFO 22184 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-23T23:08:21.575+02:00  INFO 22184 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-23T23:08:21.642+02:00  INFO 22184 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T23:08:21.708+02:00  INFO 22184 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-23T23:08:22.014+02:00  INFO 22184 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T23:08:22.213+02:00  WARN 22184 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T23:08:23.059+02:00  INFO 22184 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T23:08:23.098+02:00  INFO 22184 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T23:08:23.130+02:00  WARN 22184 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2024-06-23T23:08:23.131+02:00 DEBUG 22184 --- [eanservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-06-23T23:08:23.517+02:00  WARN 22184 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23T23:08:23.725+02:00 DEBUG 22184 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-23T23:08:23.981+02:00  INFO 22184 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-23T23:08:23.988+02:00  INFO 22184 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.621 seconds (process running for 4.927)
+2024-06-23T23:08:29.910+02:00  INFO 22184 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23T23:08:29.911+02:00  INFO 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-23T23:08:29.912+02:00  INFO 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-23T23:08:29.923+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:08:29.929+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:29.929+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:08:29.931+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:08:29.943+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-23T23:08:29.943+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:29.943+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:08:34.593+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:08:34.593+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:34.593+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:08:34.594+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:08:34.595+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-23T23:08:34.595+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:34.595+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:08:44.139+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-06-23T23:08:44.140+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:44.140+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:08:44.141+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-06-23T23:08:46.080+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-06-23T23:08:46.081+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:46.081+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:08:46.081+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-06-23T23:08:46.824+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-06-23T23:08:46.824+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:08:46.824+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 41F6E0EE36BA418A5D8446D7C2E66DBC
+2024-06-23T23:08:46.825+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-06-23T23:18:03.516+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2024-06-23T23:18:03.518+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:18:03.518+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-23T23:18:03.519+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-23T23:18:03.520+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-23T23:18:03.520+02:00 DEBUG 22184 --- [eanservice] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access

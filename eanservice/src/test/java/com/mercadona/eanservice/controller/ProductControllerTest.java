@@ -14,8 +14,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.util.Arrays;
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -81,5 +83,63 @@ public class ProductControllerTest {
                 .andExpect(status().isNotFound());
 
         verify(productService, times(1)).findById(product.getId());
+    }
+
+    @Test
+    public void whenGetAllProducts_thenReturnProductList() throws Exception {
+        when(productService.findAll()).thenReturn(Arrays.asList(product));
+
+        mockMvc.perform(get("/api/products")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(product.getId()))
+                .andExpect(jsonPath("$.ean").value(product.getEan()))
+                .andExpect(jsonPath("$.name").value(product.getName()));
+
+        verify(productService, times(1)).findAll();
+    }
+
+    @Test
+    public void whenCreateProduct_thenReturnCreatedProduct() throws Exception {
+        when(productService.save(any(Product.class))).thenReturn(product);
+
+        mockMvc.perform(post("/api/products")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"ean\": \"1234567123451\", \"nombre\": \"Producto Ejemplo\"}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.ean").value("1234567123451"))
+                .andExpect(jsonPath("$.nombre").value("Producto Ejemplo"));
+
+        verify(productService, times(1)).save(any(Product.class));
+    }
+
+    @Test
+    public void whenUpdateProduct_thenReturnUpdatedProduct() throws Exception {
+        ProductDTO productDTO = ProductDTO.fromProduct(product);
+        when(productService.findById(1L)).thenReturn(Optional.of(productDTO));
+        when(productService.save(any(Product.class))).thenReturn(product);
+
+        mockMvc.perform(put("/api/products/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"ean\": \"1234567123451\", \"nombre\": \"Producto Actualizado\"}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.ean").value("1234567123451"))
+                .andExpect(jsonPath("$.nombre").value("Producto Actualizado"));
+
+        verify(productService, times(1)).findById(1L);
+        verify(productService, times(1)).save(any(Product.class));
+    }
+
+    @Test
+    public void whenDeleteProduct_thenReturnNoContent() throws Exception {
+        doNothing().when(productService).deleteById(1L);
+
+        mockMvc.perform(delete("/api/products/1")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
+
+        verify(productService, times(1)).deleteById(1L);
     }
 }

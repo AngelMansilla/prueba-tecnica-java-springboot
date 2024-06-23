@@ -1,5 +1,6 @@
 package com.mercadona.eanservice.service.impl;
 
+import com.mercadona.eanservice.exception.DestinationNotFoundException;
 import com.mercadona.eanservice.model.Destination;
 import com.mercadona.eanservice.repository.DestinationRepository;
 import com.mercadona.eanservice.service.DestinationService;
@@ -24,7 +25,7 @@ public class DestinationServiceImpl implements DestinationService {
 
     @Override
     public Optional<Destination> findById(Long id) {
-        return destinationRepository.findById(id);
+        return Optional.ofNullable(destinationRepository.findById(id).orElseThrow(() -> new DestinationNotFoundException("Destination not found")));
     }
 
     @Override

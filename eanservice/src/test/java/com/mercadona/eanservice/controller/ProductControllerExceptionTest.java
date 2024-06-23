@@ -1,5 +1,6 @@
 package com.mercadona.eanservice.controller;
 
+import com.mercadona.eanservice.exception.GlobalExceptionHandler;
 import com.mercadona.eanservice.exception.ProductNotFoundException;
 import com.mercadona.eanservice.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;

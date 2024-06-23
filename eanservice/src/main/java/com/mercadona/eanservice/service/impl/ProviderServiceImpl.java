@@ -1,5 +1,6 @@
 package com.mercadona.eanservice.service.impl;
 
+import com.mercadona.eanservice.exception.ProviderNotFoundException;
 import com.mercadona.eanservice.model.Provider;
 import com.mercadona.eanservice.repository.ProviderRepository;
 import com.mercadona.eanservice.service.ProviderService;
@@ -24,7 +25,7 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public Optional<Provider> findById(Long id) {
-        return providerRepository.findById(id);
+        return Optional.ofNullable(providerRepository.findById(id).orElseThrow(() -> new ProviderNotFoundException("Provider not found")));
     }
 
     @Override

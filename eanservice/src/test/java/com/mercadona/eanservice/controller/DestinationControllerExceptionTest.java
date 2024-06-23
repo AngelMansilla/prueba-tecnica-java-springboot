@@ -1,6 +1,7 @@
 package com.mercadona.eanservice.controller;
 
 import com.mercadona.eanservice.exception.DestinationNotFoundException;
+import com.mercadona.eanservice.exception.GlobalExceptionHandler;
 import com.mercadona.eanservice.service.DestinationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

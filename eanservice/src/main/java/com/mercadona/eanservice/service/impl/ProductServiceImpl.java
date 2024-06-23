@@ -1,6 +1,7 @@
 package com.mercadona.eanservice.service.impl;
 
 import com.mercadona.eanservice.dto.ProductDTO;
+import com.mercadona.eanservice.exception.ProductNotFoundException;
 import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.repository.ProductRepository;
 import com.mercadona.eanservice.service.ProductService;
@@ -27,13 +28,13 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Optional<ProductDTO> findById(Long id) {
-        return productRepository.findById(id).map(ProductDTO::fromProduct);
+        return Optional.ofNullable(productRepository.findById(id).map(ProductDTO::fromProduct).orElseThrow(() -> new ProductNotFoundException("Product not found")));
     }
 
     @Override
     @Cacheable("products")
     public Optional<Product> findByIdRaw(Long id) {
-        return productRepository.findById(id);
+        return Optional.ofNullable(productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException("Product not found")));
     }
 
     @Override

@@ -58,7 +58,7 @@ public class EanServiceTest {
         assertEquals(product.getEan(), foundProduct.get().getEan());
         assertEquals(product.getName(), foundProduct.get().getName());
         assertEquals(provider.getName(), foundProduct.get().getProviderName());
-        assertEquals(destination.getName(), foundProduct.get().getDestinationName());
+        assertEquals("Tiendas Mercadona España", foundProduct.get().getDestinationName());
     }
 
     @Test
@@ -67,5 +67,14 @@ public class EanServiceTest {
         Optional<ProductDTO> foundProduct = eanService.findByEan(product.getEan());
         verify(productRepository, times(1)).findByEan(product.getEan());
         assertTrue(foundProduct.isEmpty());
+    }
+
+    @Test
+    public void testDetermineDestination() {
+        assertEquals("Tiendas Mercadona España", eanService.determineDestination("1234567123451"));
+        assertEquals("Tiendas Mercadona Portugal", eanService.determineDestination("1234567123456"));
+        assertEquals("Almacenes", eanService.determineDestination("1234567123458"));
+        assertEquals("Oficinas Mercadona", eanService.determineDestination("1234567123459"));
+        assertEquals("Colmenas", eanService.determineDestination("1234567123450"));
     }
 }

@@ -22,6 +22,13 @@ public class Destination {
     @OneToMany(mappedBy = "destination")
     private List<Product> products;
 
+    public Destination() {
+    }
+
+    public Destination(String name) {
+        this.name = name;
+    }
+
     // Getters y setters
     public Long getId() {
         return id;

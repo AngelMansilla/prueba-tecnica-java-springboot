@@ -2,6 +2,7 @@ package com.mercadona.eanservice.controller;
 
 import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.model.Product;
+import com.mercadona.eanservice.service.EanService;
 import com.mercadona.eanservice.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +15,11 @@ import java.util.Optional;
 public class ProductController {
 
     private final ProductService productService;
+    private final EanService eanService;
 
-    public ProductController(ProductService productService) {
+    public ProductController(ProductService productService, EanService eanService) {
         this.productService = productService;
+        this.eanService = eanService;
     }
 
     @GetMapping
@@ -27,7 +30,15 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) {
         Optional<ProductDTO> productDTO = productService.findById(id);
-        return productDTO.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return productDTO.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/ean/{ean}")
+    public ResponseEntity<ProductDTO> getProductByEan(@PathVariable String ean) {
+        Optional<ProductDTO> productDTO = eanService.findByEan(ean);
+        return productDTO.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping

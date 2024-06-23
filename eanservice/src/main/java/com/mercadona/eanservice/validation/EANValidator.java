@@ -2,8 +2,8 @@ package com.mercadona.eanservice.validation;
 
 import com.mercadona.eanservice.model.Product;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class EANValidator implements ConstraintValidator<ValidEAN, Product> {
 

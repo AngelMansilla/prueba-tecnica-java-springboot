@@ -2,9 +2,9 @@ package com.mercadona.eanservice.model;
 
 import com.mercadona.eanservice.validation.ValidEAN;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @ValidEAN

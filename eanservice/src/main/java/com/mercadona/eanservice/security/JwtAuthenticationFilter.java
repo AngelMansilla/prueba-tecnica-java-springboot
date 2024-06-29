@@ -33,9 +33,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         String uri = request.getRequestURI();
         if ("/auth/login".equals(uri)) {
+            System.out.println("Uri = " + uri);  // Debug point
             filterChain.doFilter(request, response);
             return;
         }
+        System.out.println("JWT filter: Checking token"); // Debug point
         String jwt = getJwtFromRequest(request);
 
         if (jwt != null && tokenProvider.validateToken(jwt)) {

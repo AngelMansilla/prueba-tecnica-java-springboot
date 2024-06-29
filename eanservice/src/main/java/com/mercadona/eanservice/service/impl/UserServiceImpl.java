@@ -1,6 +1,9 @@
 package com.mercadona.eanservice.service.impl;
 
 import com.mercadona.eanservice.service.UserService;
+
+import jakarta.annotation.PostConstruct;
+
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +14,11 @@ import java.util.Collections;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @PostConstruct
+    public void init() {
+        System.out.println("UserServiceImpl has been initialized");
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

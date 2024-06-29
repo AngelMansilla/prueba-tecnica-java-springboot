@@ -25,19 +25,36 @@ public class AuthController {
     @PostMapping("/login")
     public Map<String, String> authenticateUser(@RequestBody Map<String, String> loginRequest) {
         try {
+            String username = loginRequest.get("username");
+            String password = loginRequest.get("password");
+
+            // Debug point: print received parameters
+            System.out.println("Received username: " + username);
+            System.out.println("Received password: " + password);
+
+            System.out.println("Attempting to authenticate user"); // Debug point
+
             Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(
-                            loginRequest.get("username"),
-                            loginRequest.get("password")
-                    )
-            );
+                    new UsernamePasswordAuthenticationToken(username, password));
+            // Debug point: print authentication details
+            System.out.println("Authentication successful: " + authentication.isAuthenticated());
+
+            System.out.println("Generating JWT token"); // Debug point
 
             String jwt = tokenProvider.generateToken(authentication);
             Map<String, String> response = new HashMap<>();
             response.put("token", jwt);
             return response;
         } catch (AuthenticationException e) {
+            // Debug point: print stack trace
+            System.out.println("Authentication failed: " + e.getMessage());
+            e.printStackTrace();
             throw new RuntimeException("Invalid login credentials");
+        } catch (Exception e) {
+            // Debug point: print stack trace
+            System.out.println("Unexpected error: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("An error occurred during authentication");
         }
     }
 

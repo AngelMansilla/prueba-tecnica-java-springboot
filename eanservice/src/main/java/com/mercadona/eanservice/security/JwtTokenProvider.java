@@ -1,8 +1,8 @@
 package com.mercadona.eanservice.security;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtParserBuilder;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,8 +20,7 @@ public class JwtTokenProvider {
     private JwtConfig jwtConfig;
 
     private SecretKey getSignInKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(jwtConfig.getSecret());
-        return Keys.hmacShaKeyFor(keyBytes);
+        return Keys.hmacShaKeyFor(jwtConfig.getSecret().getBytes());
     }
 
     public String generateToken(Authentication authentication) {
@@ -52,10 +51,10 @@ public class JwtTokenProvider {
 
     public boolean validateToken(String authToken) {
         try {
-            byte[] keyBytes = jwtConfig.getSecret().getBytes();
-            SecretKey secretKey = Keys.hmacShaKeyFor(keyBytes);
-
-            Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(authToken);
+            ((JwtParserBuilder) Jwts.builder())
+                    .verifyWith(getSignInKey())
+                    .build()
+                    . parseSignedClaims(authToken);
             return true;
         } catch (Exception e) {
             System.err.println("Token validation error: " + e.getMessage());

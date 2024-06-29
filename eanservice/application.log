@@ -517,3 +517,447 @@
 2024-06-29T09:15:51.948+02:00  INFO 23036 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-29T09:15:51.948+02:00  INFO 23036 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
 2024-06-29T09:15:51.960+02:00  INFO 23036 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-06-29T10:15:05.315+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.EanControllerTest       : Starting EanControllerTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:05.316+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.controller.EanControllerTest       : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:05.317+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.EanControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:06.026+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:06.079+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:08.189+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-29T10:15:08.394+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:08.396+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-29T10:15:08.420+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:08.420+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:08.458+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:08.480+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-29T10:15:08.482+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.007s)
+2024-06-29T10:15:08.482+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:08.491+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-29T10:15:08.539+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:08.543+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:08.635+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:08.711+02:00  INFO 8544 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-29T10:15:08.940+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:09.268+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:10.426+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:10.466+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:10.537+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:11.030+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:11.336+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:11.712+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:11.774+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:11.775+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:11.775+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:11.777+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-29T10:15:11.816+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.EanControllerTest       : Started EanControllerTest in 6.868 seconds (process running for 8.101)
+2024-06-29T10:15:11.898+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:11.899+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:11.899+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:12.057+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:12.057+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:12.058+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-29T10:15:12.071+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.ProductControllerExceptionTest]: ProductControllerExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:12.074+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.ProductControllerExceptionTest
+2024-06-29T10:15:12.103+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.ProductControllerExceptionTest   : Starting ProductControllerExceptionTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:12.104+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.c.ProductControllerExceptionTest   : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:12.104+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.ProductControllerExceptionTest   : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:12.274+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:12.281+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:12.399+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-06-29T10:15:12.399+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:12.400+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-06-29T10:15:12.400+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:12.400+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:12.402+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:12.405+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:12.405+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:12.408+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:12.409+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:12.423+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:12.438+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:12.440+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:12.504+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:12.514+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:12.528+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:12.605+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:12.694+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:12.787+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:12.801+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:12.801+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:12.801+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:12.801+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:12.810+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.ProductControllerExceptionTest   : Started ProductControllerExceptionTest in 0.732 seconds (process running for 9.095)
+2024-06-29T10:15:12.857+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:12.858+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:12.858+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:12.869+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.DestinationControllerExceptionTest]: DestinationControllerExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:12.871+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.DestinationControllerExceptionTest
+2024-06-29T10:15:12.923+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:12.923+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:12.923+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:12.934+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.AuthControllerTest]: AuthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:12.937+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.AuthControllerTest
+2024-06-29T10:15:12.966+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Starting AuthControllerTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:12.967+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:12.967+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:13.149+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:13.159+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:13.482+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-06-29T10:15:13.483+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:13.483+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-06-29T10:15:13.484+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:13.484+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:13.485+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:13.488+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:13.488+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:13.490+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:13.491+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:13.529+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:13.552+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:13.557+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:13.649+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:13.653+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:13.855+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:13.873+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:14.103+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:14.307+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:14.338+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:14.338+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:14.338+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:14.339+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-29T10:15:14.368+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.AuthControllerTest      : Started AuthControllerTest in 1.426 seconds (process running for 10.652)
+2024-06-29T10:15:14.391+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:14.391+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:14.403+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:14.448+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:14.449+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:14.449+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:14.467+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:14.471+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.ProductControllerTest
+2024-06-29T10:15:14.510+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProductControllerTest   : Starting ProductControllerTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:14.511+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.controller.ProductControllerTest   : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:14.511+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProductControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:14.838+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:14.849+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:15.121+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-06-29T10:15:15.122+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:15.122+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-06-29T10:15:15.123+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:15.123+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:15.124+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:15.127+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:15.127+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:15.129+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:15.130+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:15.156+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:15.171+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:15.175+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:15.256+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:15.258+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:15.283+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:15.387+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:15.535+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:15.695+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:15.718+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:15.718+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.718+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.720+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-29T10:15:15.734+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProductControllerTest   : Started ProductControllerTest in 1.258 seconds (process running for 12.019)
+2024-06-29T10:15:15.754+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.754+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.754+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.774+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.774+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.774+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.806+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.806+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.807+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.826+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.826+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.826+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.847+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.848+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.848+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.866+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:15.867+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:15.867+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:15.881+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.ProviderControllerTest]: ProviderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:15.884+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.ProviderControllerTest
+2024-06-29T10:15:15.909+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProviderControllerTest  : Starting ProviderControllerTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:15.909+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.controller.ProviderControllerTest  : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:15.909+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProviderControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:16.082+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:16.089+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:16.263+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-06-29T10:15:16.264+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:16.264+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-06-29T10:15:16.265+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:16.265+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:16.266+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:16.269+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:16.269+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:16.272+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:16.272+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:16.287+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:16.300+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:16.303+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:16.380+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:16.383+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:16.395+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:16.473+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:16.561+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:16.676+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:16.695+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:16.695+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.695+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.696+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-29T10:15:16.707+02:00  INFO 8544 --- [eanservice] [main] c.m.e.controller.ProviderControllerTest  : Started ProviderControllerTest in 0.82 seconds (process running for 12.992)
+2024-06-29T10:15:16.722+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.722+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.722+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:16.742+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.742+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.742+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:16.762+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.762+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.762+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:16.782+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.782+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.782+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:16.799+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.799+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.800+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-29T10:15:16.814+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:16.814+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:16.814+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:16.822+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.DestinationControllerTest]: DestinationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:16.825+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.DestinationControllerTest
+2024-06-29T10:15:16.849+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.DestinationControllerTest        : Starting DestinationControllerTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:16.849+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.c.DestinationControllerTest        : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:16.849+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.DestinationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:17.046+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:17.055+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:17.171+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-06-29T10:15:17.172+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:17.173+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-06-29T10:15:17.173+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:17.173+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:17.174+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:17.177+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2024-06-29T10:15:17.177+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:17.179+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:17.179+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:17.194+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:17.208+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:17.211+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:17.282+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:17.284+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:17.299+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:17.360+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:17.432+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:17.529+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:17.542+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:15:17.543+02:00  INFO 8544 --- [eanservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.543+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.543+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.552+02:00  INFO 8544 --- [eanservice] [main] c.m.e.c.DestinationControllerTest        : Started DestinationControllerTest in 0.723 seconds (process running for 13.837)
+2024-06-29T10:15:17.566+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.566+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.566+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.584+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.584+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.585+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.596+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.597+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.597+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.611+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.611+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.612+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.629+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.629+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.629+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.644+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.645+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.645+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.658+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.controller.ProviderControllerExceptionTest]: ProviderControllerExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:17.661+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.controller.ProviderControllerExceptionTest
+2024-06-29T10:15:17.674+02:00  INFO 8544 --- [eanservice] [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-06-29T10:15:17.675+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-29T10:15:17.675+02:00  INFO 8544 --- [eanservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-29T10:15:17.684+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.EanserviceApplicationTest]: EanserviceApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:17.692+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.EanserviceApplicationTest
+2024-06-29T10:15:17.716+02:00  INFO 8544 --- [eanservice] [main] c.m.e.EanserviceApplicationTest          : Starting EanserviceApplicationTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:17.717+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.EanserviceApplicationTest          : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:17.717+02:00  INFO 8544 --- [eanservice] [main] c.m.e.EanserviceApplicationTest          : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:17.886+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:17.895+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:18.010+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-06-29T10:15:18.011+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:18.012+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-06-29T10:15:18.012+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:18.012+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:18.013+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:18.015+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:18.015+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:18.017+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:18.017+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:18.032+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:18.048+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:18.050+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:18.116+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:18.118+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:18.133+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:18.202+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:18.277+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:18.365+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:18.383+02:00  INFO 8544 --- [eanservice] [main] c.m.e.EanserviceApplicationTest          : Started EanserviceApplicationTest in 0.688 seconds (process running for 14.667)
+2024-06-29T10:15:18.596+02:00  INFO 8544 --- [eanservice] [main] c.m.e.service.ProductServiceCacheTest    : Starting ProductServiceCacheTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:18.596+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.service.ProductServiceCacheTest    : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:18.596+02:00  INFO 8544 --- [eanservice] [main] c.m.e.service.ProductServiceCacheTest    : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:18.765+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:18.772+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:18.905+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-06-29T10:15:18.907+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:18.907+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-06-29T10:15:18.908+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:18.908+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:18.909+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:18.912+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:18.912+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:18.914+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:18.915+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:18.932+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:18.947+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:18.950+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:19.026+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:19.028+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:19.042+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:19.119+02:00  WARN 8544 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:15:19.195+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:19.304+02:00  INFO 8544 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:15:19.326+02:00  INFO 8544 --- [eanservice] [main] c.m.e.service.ProductServiceCacheTest    : Started ProductServiceCacheTest in 0.747 seconds (process running for 15.611)
+2024-06-29T10:15:19.599+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.repository.ProviderRepositoryTest]: ProviderRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:19.619+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.repository.ProviderRepositoryTest
+2024-06-29T10:15:19.649+02:00  INFO 8544 --- [eanservice] [main] c.m.e.repository.ProviderRepositoryTest  : Starting ProviderRepositoryTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:19.649+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.repository.ProviderRepositoryTest  : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:19.649+02:00  INFO 8544 --- [eanservice] [main] c.m.e.repository.ProviderRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:19.752+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:19.762+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:19.782+02:00  INFO 8544 --- [eanservice] [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-29T10:15:19.819+02:00  INFO 8544 --- [eanservice] [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:2935dff6-5e26-4498-8150-e99a4dab7810;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-29T10:15:19.832+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:19.833+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:19.835+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:2935dff6-5e26-4498-8150-e99a4dab7810 (H2 2.2)
+2024-06-29T10:15:19.837+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-29T10:15:19.837+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:19.837+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:19.838+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-29T10:15:19.843+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:19.843+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:19.859+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:19.875+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:19.878+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:19.945+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:19.953+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:19.965+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:20.021+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:20.043+02:00  INFO 8544 --- [eanservice] [main] c.m.e.repository.ProviderRepositoryTest  : Started ProviderRepositoryTest in 0.42 seconds (process running for 16.328)
+2024-06-29T10:15:20.157+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.repository.ProductRepositoryTest]: ProductRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:20.166+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.repository.ProductRepositoryTest
+2024-06-29T10:15:20.184+02:00  INFO 8544 --- [eanservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mercadona.eanservice.repository.DestinationRepositoryTest]: DestinationRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-29T10:15:20.195+02:00  INFO 8544 --- [eanservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mercadona.eanservice.EanserviceApplication for test class com.mercadona.eanservice.repository.DestinationRepositoryTest
+2024-06-29T10:15:20.218+02:00  INFO 8544 --- [eanservice] [main] c.m.e.r.DestinationRepositoryTest        : Starting DestinationRepositoryTest using Java 17.0.11 with PID 8544 (started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:15:20.218+02:00 DEBUG 8544 --- [eanservice] [main] c.m.e.r.DestinationRepositoryTest        : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:15:20.218+02:00  INFO 8544 --- [eanservice] [main] c.m.e.r.DestinationRepositoryTest        : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:15:20.299+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:15:20.307+02:00  INFO 8544 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:15:20.362+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-06-29T10:15:20.362+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn88: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:15:20.363+02:00  INFO 8544 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-06-29T10:15:20.363+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:15:20.363+02:00  INFO 8544 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:15:20.364+02:00  INFO 8544 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:15:20.367+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.000s)
+2024-06-29T10:15:20.367+02:00  WARN 8544 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:15:20.369+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:15:20.369+02:00  INFO 8544 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:15:20.382+02:00  INFO 8544 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:15:20.397+02:00  INFO 8544 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:15:20.400+02:00  WARN 8544 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:15:20.520+02:00  INFO 8544 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:15:20.524+02:00  INFO 8544 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.536+02:00  WARN 8544 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:15:20.585+02:00 DEBUG 8544 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:15:20.604+02:00  INFO 8544 --- [eanservice] [main] c.m.e.r.DestinationRepositoryTest        : Started DestinationRepositoryTest in 0.407 seconds (process running for 16.889)
+2024-06-29T10:15:20.621+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.623+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-29T10:15:20.625+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-29T10:15:20.628+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.628+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-06-29T10:15:20.629+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-06-29T10:15:20.631+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.632+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-06-29T10:15:20.633+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-06-29T10:15:20.636+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.637+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-06-29T10:15:20.637+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-06-29T10:15:20.640+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.640+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-06-29T10:15:20.641+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-06-29T10:15:20.643+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.643+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-06-29T10:15:20.644+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-06-29T10:15:20.646+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.647+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-06-29T10:15:20.647+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-06-29T10:15:20.649+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.649+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-06-29T10:15:20.650+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-06-29T10:15:20.650+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.651+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:15:20.652+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-06-29T10:15:20.677+02:00  INFO 8544 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-06-29T10:16:19.258+02:00  INFO 22812 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Starting EanserviceApplication using Java 22.0.1 with PID 22812 (C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice\target\classes started by angel in C:\Workspaces\Workspace VSC\prueba-tecnica-mercadona\eanservice)
+2024-06-29T10:16:19.260+02:00 DEBUG 22812 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-06-29T10:16:19.261+02:00  INFO 22812 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T10:16:19.788+02:00  INFO 22812 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-29T10:16:19.828+02:00  INFO 22812 --- [eanservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2024-06-29T10:16:20.472+02:00  INFO 22812 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-29T10:16:20.483+02:00  INFO 22812 --- [eanservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-29T10:16:20.483+02:00  INFO 22812 --- [eanservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-29T10:16:20.545+02:00  INFO 22812 --- [eanservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-29T10:16:20.545+02:00  INFO 22812 --- [eanservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1226 ms
+2024-06-29T10:16:20.571+02:00  INFO 22812 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-29T10:16:20.734+02:00  INFO 22812 --- [eanservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-29T10:16:20.736+02:00  INFO 22812 --- [eanservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-29T10:16:20.745+02:00  INFO 22812 --- [eanservice] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-29T10:16:20.835+02:00 DEBUG 22812 --- [eanservice] [main] c.m.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-29T10:16:20.976+02:00  INFO 22812 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2024-06-29T10:16:20.976+02:00  INFO 22812 --- [eanservice] [main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2024-06-29T10:16:21.003+02:00  INFO 22812 --- [eanservice] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2024-06-29T10:16:21.023+02:00  INFO 22812 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024-06-29T10:16:21.025+02:00  INFO 22812 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2024-06-29T10:16:21.025+02:00  WARN 22812 --- [eanservice] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-06-29T10:16:21.032+02:00  INFO 22812 --- [eanservice] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-06-29T10:16:21.064+02:00  INFO 22812 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-06-29T10:16:21.068+02:00  INFO 22812 --- [eanservice] [main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-06-29T10:16:21.129+02:00  INFO 22812 --- [eanservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-29T10:16:21.175+02:00  INFO 22812 --- [eanservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.0.0.Alpha3
+2024-06-29T10:16:21.437+02:00  INFO 22812 --- [eanservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-29T10:16:21.615+02:00  WARN 22812 --- [eanservice] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-29T10:16:22.395+02:00  INFO 22812 --- [eanservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-29T10:16:22.432+02:00  INFO 22812 --- [eanservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:16:22.452+02:00  WARN 22812 --- [eanservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-29T10:16:22.819+02:00  WARN 22812 --- [eanservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-29T10:16:23.028+02:00 DEBUG 22812 --- [eanservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-06-29T10:16:23.291+02:00  INFO 22812 --- [eanservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-29T10:16:23.298+02:00  INFO 22812 --- [eanservice] [main] c.m.eanservice.EanserviceApplication     : Started EanserviceApplication in 4.441 seconds (process running for 4.725)
+2024-06-29T10:18:46.268+02:00  INFO 22812 --- [eanservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-29T10:18:46.268+02:00  INFO 22812 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-29T10:18:46.270+02:00  INFO 22812 --- [eanservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-29T10:18:46.286+02:00 DEBUG 22812 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/destinations
+2024-06-29T10:18:46.516+02:00 DEBUG 22812 --- [eanservice] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/destinations
+2024-06-29T10:18:49.218+02:00 DEBUG 22812 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/destinations/1
+2024-06-29T10:18:49.301+02:00 DEBUG 22812 --- [eanservice] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/destinations/1
+2024-06-29T10:18:52.135+02:00  INFO 22812 --- [eanservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-29T10:18:52.138+02:00  INFO 22812 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-29T10:18:52.139+02:00  INFO 22812 --- [eanservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

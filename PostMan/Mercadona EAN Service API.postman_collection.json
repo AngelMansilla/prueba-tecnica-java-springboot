@@ -62,7 +62,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/products/:id?id=1",
+							"raw": "http://localhost:8080/api/products/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -71,19 +71,7 @@
 							"path": [
 								"api",
 								"products",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -105,7 +93,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/products/ean/:ean?ean=1234567890123",
+							"raw": "http://localhost:8080/api/products/ean/1234567123451",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -115,19 +103,7 @@
 								"api",
 								"products",
 								"ean",
-								":ean"
-							],
-							"query": [
-								{
-									"key": "ean",
-									"value": "1234567890123"
-								}
-							],
-							"variable": [
-								{
-									"key": "ean",
-									"value": ""
-								}
+								"1234567123451"
 							]
 						}
 					},
@@ -197,7 +173,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/products/:id?id=1",
+							"raw": "http://localhost:8080/api/products/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -206,19 +182,7 @@
 							"path": [
 								"api",
 								"products",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -240,7 +204,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/products/:id?id=1",
+							"raw": "http://localhost:8080/api/products/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -249,19 +213,7 @@
 							"path": [
 								"api",
 								"products",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -318,7 +270,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/destinations/:id?id=1",
+							"raw": "http://localhost:8080/api/destinations/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -327,19 +279,7 @@
 							"path": [
 								"api",
 								"destinations",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -359,7 +299,13 @@
 							]
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"code\": \"1\",\r\n    \"name\": \"Destino Ejemplo\"\r\n}\r\n",
@@ -409,7 +355,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/destinations/:id?id=1",
+							"raw": "http://localhost:8080/api/destinations/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -418,19 +364,7 @@
 							"path": [
 								"api",
 								"destinations",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -452,7 +386,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/destinations/:id?id=1",
+							"raw": "http://localhost:8080/api/destinations/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -461,19 +395,7 @@
 							"path": [
 								"api",
 								"destinations",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -530,7 +452,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/providers/:id?id=1",
+							"raw": "http://localhost:8080/api/providers/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -539,19 +461,7 @@
 							"path": [
 								"api",
 								"providers",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -621,7 +531,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/providers/:id?id=1",
+							"raw": "http://localhost:8080/api/providers/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -630,19 +540,7 @@
 							"path": [
 								"api",
 								"providers",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},
@@ -664,7 +562,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/providers/:id?id=1",
+							"raw": "http://localhost:8080/api/providers/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -673,19 +571,7 @@
 							"path": [
 								"api",
 								"providers",
-								":id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"1"
 							]
 						}
 					},

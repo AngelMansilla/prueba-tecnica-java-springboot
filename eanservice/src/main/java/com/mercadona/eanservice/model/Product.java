@@ -1,7 +1,7 @@
 package com.mercadona.eanservice.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.mercadona.eanservice.validation.ValidEAN;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -24,10 +24,12 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "provider_id", nullable = false)
+    @JsonBackReference("provider-products")
     private Provider provider;
 
     @ManyToOne
     @JoinColumn(name = "destination_id", nullable = false)
+    @JsonBackReference("destination-products")
     private Destination destination;
 
     // Getters y setters
@@ -70,6 +72,4 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
-
-    
 }

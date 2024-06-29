@@ -1,5 +1,6 @@
 package com.mercadona.eanservice.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -20,6 +21,7 @@ public class Provider {
     private String providerCode;
 
     @OneToMany(mappedBy = "provider")
+    @JsonManagedReference("provider-products")
     private List<Product> products;
 
     // Getters y setters

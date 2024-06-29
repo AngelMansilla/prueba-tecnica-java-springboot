@@ -3,6 +3,7 @@ package com.mercadona.eanservice.controller;
 import com.mercadona.eanservice.model.Provider;
 import com.mercadona.eanservice.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +28,7 @@ public class ProviderController {
         return provider.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Provider createProvider(@RequestBody Provider provider) {
         return providerService.save(provider);
     }

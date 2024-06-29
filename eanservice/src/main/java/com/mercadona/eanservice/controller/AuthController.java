@@ -28,18 +28,8 @@ public class AuthController {
             String username = loginRequest.get("username");
             String password = loginRequest.get("password");
 
-            // Debug point: print received parameters
-            System.out.println("Received username: " + username);
-            System.out.println("Received password: " + password);
-
-            System.out.println("Attempting to authenticate user"); // Debug point
-
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(username, password));
-            // Debug point: print authentication details
-            System.out.println("Authentication successful: " + authentication.isAuthenticated());
-
-            System.out.println("Generating JWT token"); // Debug point
 
             String jwt = tokenProvider.generateToken(authentication);
             Map<String, String> response = new HashMap<>();

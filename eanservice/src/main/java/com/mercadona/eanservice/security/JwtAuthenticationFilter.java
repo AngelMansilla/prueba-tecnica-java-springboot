@@ -39,6 +39,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
         System.out.println("JWT filter: Checking token"); // Debug point
         String jwt = getJwtFromRequest(request);
+        System.out.println(jwt);
 
         if (jwt != null && tokenProvider.validateToken(jwt)) {
             String username = tokenProvider.getUsernameFromJWT(jwt);

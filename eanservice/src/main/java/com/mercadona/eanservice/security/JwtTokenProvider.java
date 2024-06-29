@@ -1,6 +1,7 @@
 package com.mercadona.eanservice.security;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.JwtParserBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -51,10 +52,11 @@ public class JwtTokenProvider {
 
     public boolean validateToken(String authToken) {
         try {
-            ((JwtParserBuilder) Jwts.builder())
+            Jwts.parser()
                     .verifyWith(getSignInKey())
                     .build()
-                    . parseSignedClaims(authToken);
+                    .parseSignedClaims(authToken)
+                    .getPayload();
             return true;
         } catch (Exception e) {
             System.err.println("Token validation error: " + e.getMessage());

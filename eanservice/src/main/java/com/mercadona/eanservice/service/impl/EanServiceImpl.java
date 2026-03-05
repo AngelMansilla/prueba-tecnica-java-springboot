@@ -39,6 +39,8 @@ public class EanServiceImpl implements EanService {
                 return "Tiendas Mercadona Portugal";
             case '8':
                 return "Almacenes";
+            case '7':
+                return "Otros Destinos";
             case '9':
                 return "Oficinas Mercadona";
             case '0':

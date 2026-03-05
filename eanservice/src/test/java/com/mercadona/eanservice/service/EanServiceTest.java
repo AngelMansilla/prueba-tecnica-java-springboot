@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
-
 public class EanServiceTest {
 
     @Mock
@@ -43,7 +42,7 @@ public class EanServiceTest {
         destination.setCode("1");
 
         product = new Product();
-        product.setId(1L); 
+        product.setId(1L);
         product.setEan("1234567123451");
         product.setName("Producto Ejemplo");
         product.setProvider(provider);
@@ -77,5 +76,6 @@ public class EanServiceTest {
         assertEquals("Almacenes", eanService.determineDestination("1234567123458"));
         assertEquals("Oficinas Mercadona", eanService.determineDestination("1234567123459"));
         assertEquals("Colmenas", eanService.determineDestination("1234567123450"));
+        assertEquals("Otros Destinos", eanService.determineDestination("1234567123457"));
     }
 }

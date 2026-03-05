@@ -1,6 +1,11 @@
-.vscode/
-target/
+# Logs
 *.log
 *.log.*
-*.gz
-**/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build
+target/
+bin/

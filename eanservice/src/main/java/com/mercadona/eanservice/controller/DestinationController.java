@@ -2,7 +2,6 @@ package com.mercadona.eanservice.controller;
 
 import com.mercadona.eanservice.model.Destination;
 import com.mercadona.eanservice.service.DestinationService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +13,11 @@ import java.util.Optional;
 @RequestMapping("/api/destinations")
 public class DestinationController {
 
-    @Autowired
-    private DestinationService destinationService;
+    private final DestinationService destinationService;
+
+    public DestinationController(DestinationService destinationService) {
+        this.destinationService = destinationService;
+    }
 
     @GetMapping
     public List<Destination> getAllDestinations() {
@@ -34,7 +36,8 @@ public class DestinationController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Destination> updateDestination(@PathVariable Long id, @RequestBody Destination destinationDetails) {
+    public ResponseEntity<Destination> updateDestination(@PathVariable Long id,
+            @RequestBody Destination destinationDetails) {
         Optional<Destination> destination = destinationService.findById(id);
         if (destination.isPresent()) {
             Destination updatedDestination = destination.get();

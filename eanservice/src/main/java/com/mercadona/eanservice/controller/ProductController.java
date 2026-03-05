@@ -5,7 +5,6 @@ import com.mercadona.eanservice.model.Product;
 import com.mercadona.eanservice.service.EanService;
 import com.mercadona.eanservice.service.ProductService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,11 +16,13 @@ import java.util.Optional;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
+    private final EanService eanService;
 
-    @Autowired
-    private EanService eanService;
+    public ProductController(ProductService productService, EanService eanService) {
+        this.productService = productService;
+        this.eanService = eanService;
+    }
 
     @GetMapping
     public List<Product> getAllProducts() {
@@ -62,7 +63,7 @@ public class ProductController {
             return ResponseEntity.notFound().build();
         }
     }
-    
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteById(id);

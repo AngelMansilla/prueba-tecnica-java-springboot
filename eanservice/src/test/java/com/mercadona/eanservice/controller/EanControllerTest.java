@@ -4,12 +4,9 @@ import com.mercadona.eanservice.dto.ProductDTO;
 import com.mercadona.eanservice.service.EanService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -20,26 +17,24 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@ExtendWith(MockitoExtension.class)
 public class EanControllerTest {
 
-    @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @Mock
     private EanService eanService;
 
-    @InjectMocks
     private EanController eanController;
 
     private ProductDTO productDTO;
 
     @BeforeEach
     public void setUp() {
-        MockitoAnnotations.openMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(eanController).build();
-        productDTO = new ProductDTO(1L, "1234567123451", "Producto Ejemplo", "Proveedor Ejemplo", "Tiendas Mercadona España");
+        eanController = new EanController(eanService);
+        this.mockMvc = MockMvcBuilders.standaloneSetup(eanController).build();
+        productDTO = new ProductDTO(1L, "1234567123451", "Producto Ejemplo", "Proveedor Ejemplo",
+                "Tiendas Mercadona España");
     }
 
     @Test

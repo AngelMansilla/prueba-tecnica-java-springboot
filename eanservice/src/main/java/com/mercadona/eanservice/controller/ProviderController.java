@@ -2,7 +2,6 @@ package com.mercadona.eanservice.controller;
 
 import com.mercadona.eanservice.model.Provider;
 import com.mercadona.eanservice.service.ProviderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +13,11 @@ import java.util.Optional;
 @RequestMapping("/api/providers")
 public class ProviderController {
 
-    @Autowired
-    private ProviderService providerService;
+    private final ProviderService providerService;
+
+    public ProviderController(ProviderService providerService) {
+        this.providerService = providerService;
+    }
 
     @GetMapping
     public List<Provider> getAllProviders() {

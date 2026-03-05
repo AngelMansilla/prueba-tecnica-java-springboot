@@ -8,12 +8,9 @@ import com.mercadona.eanservice.service.EanService;
 import com.mercadona.eanservice.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -26,38 +23,36 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@ExtendWith(MockitoExtension.class)
 public class ProductControllerTest {
 
-    @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @Mock
     private ProductService productService;
 
-    @MockBean
+    @Mock
     private EanService eanService;
 
-    @InjectMocks
     private ProductController productController;
 
     private Product product;
     private Provider provider;
     private Destination destination;
+    private ProductDTO productDTO;
 
     @BeforeEach
     public void setUp() {
-        MockitoAnnotations.openMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(productController).build();
-
-        provider = new Provider();
-        provider.setName("Proveedor Ejemplo");
-        provider.setProviderCode("1234567");
+        productController = new ProductController(productService, eanService);
+        this.mockMvc = MockMvcBuilders.standaloneSetup(productController).build();
 
         destination = new Destination();
-        destination.setName("Destino Ejemplo");
-        destination.setCode("1");
+        destination.setId(1L);
+        destination.setName("Tiendas Mercadona España");
+
+        provider = new Provider();
+        provider.setId(1L);
+        provider.setName("Proveedor Ejemplo");
 
         product = new Product();
         product.setId(1L);
@@ -65,11 +60,13 @@ public class ProductControllerTest {
         product.setName("Producto Ejemplo");
         product.setProvider(provider);
         product.setDestination(destination);
+
+        productDTO = new ProductDTO(product.getId(), product.getEan(), product.getName(), provider.getName(),
+                destination.getName());
     }
 
     @Test
     public void whenGetProductById_thenReturnProductDTO() throws Exception {
-        ProductDTO productDTO = ProductDTO.fromProduct(product);
         when(productService.findById(product.getId())).thenReturn(Optional.of(productDTO));
 
         mockMvc.perform(get("/api/products/{id}", product.getId())

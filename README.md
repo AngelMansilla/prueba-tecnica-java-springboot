@@ -19,7 +19,7 @@ This project has been updated to follow modern Spring Boot standards and best pr
 
 ## 🛠️ Technology Stack
 
-- **Java**: 25 (with ByteBuddy experimental support)
+- **Java**: 17 (Project source) / Compatible up to JDK 25 (via ByteBuddy experimental support for tests)
 - **Spring Boot**: 3.3.1
 - **Security**: Spring Security + JWT
 - **Database**: H2 (In-memory) + JPA/Hibernate
